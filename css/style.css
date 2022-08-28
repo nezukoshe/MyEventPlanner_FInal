@@ -19,6 +19,8 @@
    --border:.1rem solid black;
    --box-shadow:0 .5rem 1rem rgba(0,0,0,.5);
    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+   --maroon:#3e0005;
+
 }
 
 
@@ -103,7 +105,7 @@ section{
    position: sticky;
    top:0; left:0; right:0;
    z-index: 1000;
-   background-color: #C25DC3;
+    background-color: #C25DC3;
    /*background: rgba(0,0,0,0.2)*/
    display: flex;
    padding-top: 2rem;
@@ -125,7 +127,7 @@ section{
 .header .navbar a{
    font-size: 2rem;
    margin-left: 2rem;
-   color:var(--light-white);
+   color:var(--light-bg);
 }
 
 .header .navbar a:hover{
@@ -611,14 +613,22 @@ section{
 
 .packages .box-container{
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
    gap: 2rem;
 }
+
+
+.packages  h1{
+   
+   color:var(--pp2);
+}
+
 
 .packages .box-container .box{
    border:var(--border);
    box-shadow: var(--box-shadow);
-   background: var(--white);
+   background: #ffb9ff;
+
    display: none;
 }
 
@@ -648,18 +658,18 @@ section{
 }
 
 .packages .box-container .box .content{
-   padding:2rem;
+   padding:5rem;
    text-align: center;
 }
 
 .packages .box-container .box .content h3{
    font-size: 2.5rem;
-   color:var(--black);
+   color:var(--pp2);
 }
 
 .packages .box-container .box .content p{
    font-size: 1.5rem;
-   color:var(--light-black);
+   color:var(--maroon);
    line-height: 2;
    padding:1rem 0;
 }

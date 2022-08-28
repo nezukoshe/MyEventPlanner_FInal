@@ -22,7 +22,7 @@
 
 <section class="header">
 
-   <a href="home.php" class="logo">tourBros</a>
+   <a href="home.php" class="logo">My Event Plnner</a>
 
    <nav class="navbar">
       <a href="home.php">home</a>
@@ -39,25 +39,26 @@
 
 <!-- header section ends -->
 
-<div class="heading" style="background:url(images/sunamganj2.jpg) no-repeat">
-   <h1>packages</h1>
+<div class="heading" style="background:url(images/pack9.jpg) no-repeat"  width="600" height="500">
+   <h1>packages<br></h1>
+   
 </div>
 
 <!-- packages section starts  -->
 
 <section class="packages">
 
-   <h1 class="heading-title">top destinations</h1>
+   <h1 class="heading-title" >Top Events</h1>
 
    <div class="box-container">
 
       <div class="box">
          <div class="image">
-            <img src="images/shitakundu.jpg" alt="">
+            <img src="images/mehedi.jpg" alt="">
          </div>
          <div class="content">
-            <h3>Chittagong</h3>
-            <p>Wanna visit shitakundu ? What are you waiting for! <br></p><p style="color:maroon">-> 3 nights and 2 days package <br>->only 3500 tk/per person.
+            <h3>Mehendi & Holud</h3>
+            <p>It's really tough to plan about two days !!! Then Why we are here? <br></p><p style="color:maroon">->  2 days package with all decoration,catering, music,photography 
 
             </p>
             <a href="book.php" class="btn">book now</a>
@@ -66,90 +67,92 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/book2.jpg" alt="">
+            <img src="images/pack1.jpg" alt="">
          </div>
          <div class="content">
-            <h3>Tangoar Haor</h3>
-            <p>Visit the place where the sky meets Water.Spend time in our luxury Boats <br></p><p style="color:maroon">-> 3 nights and 2 days package (including boat house)   <br>->only 5500 tk/person</p>
+            <h3>Marriage & Reception</h3>
+            <p>This Days dont come regularly,why not making this memorable? <br></p><p style="color:maroon">->  2 days package with all decoration,catering, music,photography </p>
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>
 
       <div class="box">
          <div class="image">
-            <img src="images/bandarban.jpg" alt="">
+            <img src="images/img-1.jpeg" alt="">
          </div>
          <div class="content">
-            <h3>Bandarban</h3>
-            <p>Don't You want to spend the night under the shining stars camping with your loved ones ? <br></p><p style="color:maroon">-> 4 nights and 3 days package <br> ->only 4999 tk/per person.</p>
+            <h3>4 Days Wedding</h3>
+            <p>Looking for a big package? Here it is ... <br></p><p style="color:maroon">-> 4  days package all decoration,catering, music,photography ,your desired stage </p>
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>
 
       <div class="box">
          <div class="image">
-            <img src="images/bisnakandi.jpg" alt="">
+            <img src="images/anni.jpg" alt="">
          </div>
          <div class="content">
-            <h3>Bichnakandi</h3>
-            <p>Who doesn't like waving their legs in cold water sitting on a rock!<br></p><p style="color:maroon">-> 2 nights and 1 days package <br>->only 2999 tk/per person.</p>
+           
+            <h3>Anniversary Party</h3>
+            <p>Oh you are busy but want to give your loved one a surprise? No worries,we are here for you<br></p><p style="color:maroon">-> 1 day package with flowers,decoration, foods and also photography </p>
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>
 
       <div class="box">
          <div class="image">
-            <img src="images/coxsbazar.jpg" alt="">
+            <img src="images/engage.jpg" alt="">
          </div>
          <div class="content">
-            <h3>Cox's Bazar</h3>
-            <p>May be your life is Lacking some Vitamin sea. Come lose your selves to the mighty waves <br></p><p style="color:maroon">-> 2 nights and 1 days package <br>->only 5999 tk/per person. </p>
+         <h3>Engagement</h3>
+         
+            <p>This is the starting of two new lifes, why not make this day memorable? <br></p><p style="color:maroon">->  1 days package  </p>
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>
 
       <div class="box">
          <div class="image">
-            <img src="images/jaflong.jpg" alt="">
+            <img src="images/birth.jpg" alt="">
          </div>
          <div class="content">
-            <h3>Jaflong</h3>
-            <p>If you love waterfalls. You will surely love this place.<br></p><p style="color:maroon">-> 2 nights and 1 days package <br>->only 2999 tk/per person.</p>
+         <h3>Birthday Party</h3>
+           
+            <p>Getting old is fun, Give a surprise to your friend, partner & family<br></p><p style="color:maroon">-> 1 days package .</p>
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>
 
       <div class="box">
          <div class="image">
-            <img src="images/sylhet.jpg" alt="">
+            <img src="images/new.jpg" alt="">
          </div>
          <div class="content">
-            <h3>Sylhet</h3>
-            <p>Visit the Cha bagans of Bangladesh.For those who are Tea positive all the time.<br></p><p style="color:maroon">-> 2 nights and 1 days package <br>->only 2699 tk/per person.</p>
+            <h3>New Year Party</h3>
+            <p>Why not a good celebration to forget past bad memories and starting a new !!!<br></p><p style="color:maroon">-> 1 nights and 1 days package with bbq party </p>
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>
 
       <div class="box">
          <div class="image">
-            <img src="images/sundarban.jpg" alt="">
+            <img src="images/reunion.png" alt="">
          </div>
          <div class="content">
-            <h3>Shundarban</h3>
-            <p>Visit the largest mangrove forest. Who might know you might see the royal Bengal Tiger also !<br></p><p style="color:maroon"> 5 nights and 4 days package (in ship)<br>->only 7500 tk/per person.</p>
+         <h3>Reunion Party</h3>
+            <p>Too much busy with working life? Need a hangout with old buddies? Lets plan <br></p><p style="color:maroon"> 1 day package </p>
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>
 
       <div class="box">
          <div class="image">
-            <img src="images/mymensingh.jpg" alt="">
+            <img src="images/corporate.jpg" alt="">
          </div>
          <div class="content">
-            <h3>Mymensingh</h3>
-            <p>A place rich with history doesn't need elaborate descriptions. <br></p>
-<p style="color:maroon">-> 2 nights and 1 days package <br>
-->only 2499 tk/per person.</p>
+            <h3>Corporate Events</h3>
+            <p>Get a formal and unique event  <br></p>
+<p style="color:maroon">-> 1 day package </p>
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>
