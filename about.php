@@ -44,7 +44,7 @@
 
 <!-- header section ends -->
 
-<div class="heading" style="background:url(images/optionsBG.jpg)  no-repeat" width="600" height="300">
+<div class="heading" style="background:url(images/common.jpg)  no-repeat" width="600" height="300">
    <h1>about us</h1>
 </div>
 
@@ -63,7 +63,7 @@
       <div class="icons-container">
          <div class="icons">
             <i class="fas fa-map"></i>
-            <span>top destinations</span>
+            <span>top events</span>
          </div>
          <div class="icons">
             <i class="fas fa-hand-holding-usd"></i>
@@ -194,48 +194,48 @@
 
 <section class="footer">
 
-   <div class="box-container">
-
-      <div class="box">
-         <h3>quick links</h3>
-         <a href="home.php"> <i class="fas fa-angle-right"></i> home</a>
-         <a href="about.php"> <i class="fas fa-angle-right"></i> about</a>
-         <a href="package.php"> <i class="fas fa-angle-right"></i> package</a>
-         <a href="book.php"> <i class="fas fa-angle-right"></i> book</a>
-         <a href="login.php"> <i class="fas fa-angle-right"></i> login</a>
-      </div>
-
-      <div class="box">
-         <h3>extra links</h3>
-         <a href="#"> <i class="fas fa-angle-right"></i> ask questions</a>
-         <a href="#"> <i class="fas fa-angle-right"></i> about us</a>
-         <a href="#"> <i class="fas fa-angle-right"></i> privacy policy</a>
-         <a href="#"> <i class="fas fa-angle-right"></i> terms of use</a>
-      </div>
-
-      <div class="box">
-         <h3>contact info</h3>
-         <a href="#"> <i class="fas fa-phone"></i> +01733110068 </a>
-         <a href="#"> <i class="fas fa-phone"></i> +01733110064 </a>
-         <a href="#"> <i class="fas fa-envelope"></i> bony@gmail.com </a>
-         <a href="#"> <i class="fas fa-envelope"></i> raffin@gmail.com </a>
-         <a href="#"> <i class="fas fa-map"></i> mirpur, dhaka - 1216 </a>
-      </div>
-
-      <div class="box">
-         <h3>follow us</h3>
-         <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-         <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-         <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-         <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-      </div>
-
-   </div>
-
-   <div class="credit"> created by <span>AB & DM</span> | all rights reserved! </div>
-
-</section>
-
+    <div class="box-container">
+ 
+       <div class="box">
+          <h3>quick links</h3>
+          <a href="home.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Home</a>
+          <a href="about.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>About Us</a>
+          <a href="services.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Services</a>
+          <a href="gallery.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Gallery</a>
+          <a href="combo.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Combo</a>
+          <a href="reservation.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Reservation</a>
+       </div>
+ 
+       <div class="box">
+          <h3>extra links</h3>
+          <a href="#"   style="text-decoration: none"> <i class="fas fa-angle-right"></i> ask questions</a>
+          <a href="#"   style="text-decoration: none"> <i class="fas fa-angle-right"></i> about us</a>
+          <a href="#"   style="text-decoration: none"> <i class="fas fa-angle-right"></i> privacy policy</a>
+          <a href="#"   style="text-decoration: none"> <i class="fas fa-angle-right"></i> terms of use</a>
+       </div>
+ 
+       <div class="box">
+          <h3>contact info</h3>
+          <a href="#"   style="text-decoration: none"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+          <a href="#"   style="text-decoration: none"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+          <a href="#"   style="text-decoration: none"> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </a>
+          <a href="#"   style="text-decoration: none"> <i class="fas fa-map"></i> mumbai, india - 400104 </a>
+       </div>
+ 
+       <div class="box">
+          <h3>follow us</h3>
+          <a href="#" style="text-decoration: none"> <i class="fab fa-facebook-f"></i> facebook </a>
+          <a href="#" style="text-decoration: none"> <i class="fab fa-twitter"></i> twitter </a>
+          <a href="#" style="text-decoration: none"> <i class="fab fa-instagram"></i> instagram </a>
+          <a href="#" style="text-decoration: none"> <i class="fab fa-linkedin"></i> linkedin </a>
+       </div>
+ 
+    </div>
+ 
+    <div class="credit"> created by <span>Jaasia & Oyshe</span> | all rights reserved! </div>
+ 
+ </section>
+ 
 
 <!-- footer section ends -->
 

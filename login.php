@@ -21,7 +21,7 @@
 
 <section class="header">
 
-   <a href="home.php" class="logo">tourbros.</a>
+   <a href="home.php" class="logo">My Event Planner.</a>
 
    <nav class="navbar">
       <a href="home.php">home</a>

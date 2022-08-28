@@ -3,7 +3,6 @@
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   hi jassia
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>home</title>
 
@@ -23,7 +22,7 @@
 
 <section class="header">
 
-   <a href="home.php" class="logo">My Event Planner</a>
+   <a href="home.php" class="logo">My Event Planner.</a>
 
    <nav class="navbar">
       <a href="home.php">home</a>
@@ -83,6 +82,28 @@
 
 <!-- home section ends -->
 
+
+
+<!-- home about section starts  -->
+
+<section class="home-about">
+   
+   <div class="image">
+      <img src="images/about1.png"  alt="" width="400" height="400">
+   </div>
+
+   <div class="content">
+      <h3>about us</h3>
+      <p>" My Event Planner " is an website which contains all the information for planning a event , will help to choose your specific event , will estimate cost of the whole event. </p>
+      <a href="about.php" class="btn">know more</a>
+   </div>
+
+</section>
+
+<!-- home about section ends -->
+
+
+
 <!-- services section starts  -->
 
 <section class="services">
@@ -129,23 +150,6 @@
 
 <!-- services section ends -->
 
-<!-- home about section starts  -->
-
-<section class="home-about">
-
-   <div class="image">
-      <img src="images/about2.png"  alt="" width="400" height="300">
-   </div>
-
-   <div class="content">
-      <h3>about us</h3>
-      <p>" My Event Planner " is an website which contains all the information for planning a event , will help to choose your specific event , will estimate cost of the whole event. </p>
-      <a href="about.php" class="btn">know more</a>
-   </div>
-
-</section>
-
-<!-- home about section ends -->
 
 <!-- home packages section starts  -->
 
@@ -183,7 +187,7 @@
          </div>
          <div class="content">
             <h3>Corporate Events</h3>
-            <p>Boss is angry? No worries.<br> We are here to make your office event memorable </p>
+            <p>Boss is angry? No worries. We are here to make your office event memorable </p>
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>

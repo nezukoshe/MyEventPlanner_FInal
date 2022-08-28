@@ -1,18 +1,23 @@
 <?php
 
-   $connection = mysqli_connect('localhost','root','','arb');
+   $connection = mysqli_connect('localhost','root','','form');
 
-   if(isset($_POST['send'])){
+   if(isset($_POST['submit'])){
+      $dateofevent = $_POST['dateofevent'];
+      $timeofevent = $_POST['timeofevent'];
       $name = $_POST['name'];
       $email = $_POST['email'];
       $phone = $_POST['phone'];
       $address = $_POST['address'];
-      $location = $_POST['location'];
+      $type = $_POST['type'];
       $guests = $_POST['guests'];
-      $arrivals = $_POST['arrivals'];
-      $leaving = $_POST['leaving'];
+      $stage = $_POST['stage'];
+      $theme = $_POST['theme'];
+      $photographer = $_POST['photographer'];
+      $menu = $_POST['menu'];
+      $description = $_POST['description'];
 
-      $request = " insert into arb_form(name, email, phone, address, location, guests, arrivals, leaving) values('$name','$email','$phone','$address','$location','$guests','$arrivals','$leaving') ";
+      $request = " insert into booking(dateofevent, timeofevent, name, email, phone, address, type, guests, stage, theme, photographer, menu, description) values('$dateofevent','$timeofevent','$name','$email','$phone','$address','$type','$guests','$stage','$theme','$photographer', '$menu', '$description')";
       mysqli_query($connection, $request);
 
       header('location:book.php'); 

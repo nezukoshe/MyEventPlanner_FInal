@@ -50,3 +50,9 @@ loadMoreBtn.onclick = () =>{
       loadMoreBtn.style.display = 'none';
    }
 }
+
+var today = new Date().toISOString().split('T')[0];
+document.getElementsByName("dateofevent")[0].setAttribute('min', today);
+
+
+
