@@ -104,7 +104,6 @@ section{
    top:0; left:0; right:0;
    z-index: 1000;
    background:rgba(194,93,195,.7);
-  
    display: flex;
    padding-top: 2rem;
    padding-bottom: 2rem;
