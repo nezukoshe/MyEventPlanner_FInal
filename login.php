@@ -72,15 +72,15 @@ if (isset($_POST['submit'])) {
 
 <section class="header">
 
-   <a href="home.php" class="logo">MyEventPlanner.</a>
+   <a href="home.php" class="logo" style="text-decoration: none" >MyEventPlanner.</a>
 
    <nav class="navbar">
-      <a href="home.php">home</a>
-      <a href="about.php">about</a>
-      <a href="package.php">package</a>
-      <a href="book.php">book</a>
-      <a href="login.php">login</a>
-      <a href="contactus.php">Contact Us</a>
+      <a href="home.php" style="text-decoration: none">home</a>
+      <a href="about.php" style="text-decoration: none">about</a>
+      <a href="package.php" style="text-decoration: none">package</a>
+      <a href="book.php" style="text-decoration: none">book</a>
+      <a href="login.php" style="text-decoration: none">login</a>
+      <a href="contactus.php" style="text-decoration: none">Contact Us</a>
    </nav>
 
    <div id="menu-btn" class="fas fa-bars"></div>

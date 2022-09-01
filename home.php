@@ -89,11 +89,11 @@
 <section class="home-about">
    
    <div class="image">
-      <img src="images/about1.png"  alt="" width="400" height="400">
+      <img src="images/about2.png"  alt="" width="400" height="450">
    </div>
 
    <div class="content">
-      <h3>about us</h3>
+      
       <p>" My Event Planner " is an website which contains all the information for planning a event , will help to choose your specific event , will estimate cost of the whole event. </p>
       <a href="about.php" class="btn">know more</a>
    </div>

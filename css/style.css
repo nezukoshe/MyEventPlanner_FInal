@@ -263,19 +263,18 @@ section{
 }
 
 .login .login-register-text{
-
-
    color: #111;
-   font-weight: 600;
-   
+   font-weight: 600;  
 }
 .login .login-register-text a{
-
   text-decoration: none;
-   color: #ffb9ff;
-   
-   
+   color: var(--pp3);  
 }
+
+.login .container .login-register-text a{
+   text-decoration: none;
+    color: var(--pp2);  
+ }
 
 @media (max-width: 430px) {
    .container {
@@ -473,14 +472,14 @@ section{
 .home-packages .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-   background: var(--pp);
+   background: var(--purple1);
    gap: 2rem;
 }
 
 .home-packages .box-container .box{
    border:var(--border);
    box-shadow: var(--box-shadow);
-   background: var(--black);
+   background: var(--pp2);
 }
 
 .home-packages .box-container .box:hover .image img{
