@@ -44,7 +44,8 @@
 
 <!-- header section ends -->
 
-<div class="heading" style="background:url(images/common.jpg)  no-repeat" width="600" height="300">
+<div class="heading" style="background:linear-gradient(136deg,  rgb(141, 60, 168) 15%,rgb(45, 5, 48) 100%)" width="600" height="300">
+
    <h1>about us</h1>
 </div>
 

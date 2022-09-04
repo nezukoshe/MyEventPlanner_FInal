@@ -13,11 +13,31 @@ window.onscroll = () =>{
 
 var swiper = new Swiper(".home-slider", {
    loop:true,
+   centeredSlides: true,
+   autoHeight:true,
+   spaceBetween: 20,
+
+
    navigation: {
-     nextEl: ".swiper-button-next",
-     prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+   autoplay: {
+     delay: 5000,
+     disableOnInteraction: false,
    },
-});
+   breakpoints: {
+     0: {
+       slidesPerView: 1,
+     },
+     700: {
+       slidesPerView: 2,
+     },
+     1000: {
+       slidesPerView: 3,
+     },
+   },
+ });
 
 var swiper = new Swiper(".reviews-slider", {
    grabCursor:true,

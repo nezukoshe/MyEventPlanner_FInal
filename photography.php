@@ -1,84 +1,40 @@
 
-<?php 
-
-include 'login_form.php';
-
-session_start();
-
-error_reporting(0);
-
-if (isset($_SESSION['username'])) {
-    header("Location: home.php");
-}
-
-if (isset($_POST['submit'])) {
-	$email = $_POST['email'];
-	$password = md5($_POST['password']);
-
-	$sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-	$result = mysqli_query($conn, $sql);
-	if ($result->num_rows > 0) {
-		$row = mysqli_fetch_assoc($result);
-		$_SESSION['username'] = $row['username'];
-		header("Location: home1.php");
-	} else {
-		echo "<script>alert('Woops! Email or Password is Wrong.')</script>";
-	}
-}
-
-?>
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>login</title>
-<!-- swiper css link  -->
-<link rel="stylesheet"  type="text/css"  href="style.css">
-<link rel="stylesheet"  type="text/css"
- href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>about</title>
 
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" type="text/css" href="style.css">
-
-
- <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-
-   
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
-
-
-
-    
 </head>
 <body>
 
 
 
+
+   
+<!-- header section starts  -->
+
 <section class="header">
 
-   <a href="home.php" class="logo">Tourbros.</a>
+   <a href="home.php" class="logo">My Event Planner.</a>
 
    <nav class="navbar">
       <a href="home.php">home</a>
       <a href="about.php">about</a>
       <a href="package.php">package</a>
       <a href="book.php">book</a>
+      <a href="login.php">login</a>
       <a href="contactus.php">Contact Us</a>
    </nav>
 
@@ -88,33 +44,9 @@ if (isset($_POST['submit'])) {
 
 <!-- header section ends -->
 
-
-<!--login  start-->
-
-
-<section class="login">
-
-<div class="container">
-		<form action="" method="POST" class="login-email">
-			<p class="login-text" style="font-size: 2rem; font-weight: 800;">Login</p>
-			<div class="input-group">
-				<input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
-			</div>
-			<div class="input-group">
-				<input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
-			</div>
-			<div class="input-group">
-				<button name="submit" class="btn">Login</button>
-			</div>
-			<p class="login-register-text">Don't have an account? <a href="registration.php" style="color: #6fdd97;" >Register Here</a>.</p>
-		</form>
-	</div>
-</sectiom>
-
-
-
-
-
+<div class="heading" style="background:url(images/common.jpg)  no-repeat" width="600" height="300">
+   <h1>about us</h1>
+</div>
 
 
 
@@ -174,6 +106,7 @@ if (isset($_POST['submit'])) {
     <div class="credit"> created by <span>Jaasia & Oyshe</span> | all rights reserved! </div>
  
  </section>
+ 
 
 <!-- footer section ends -->
 
@@ -191,40 +124,5 @@ if (isset($_POST['submit'])) {
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
 
-
-
-
-
-<script>
-        var x=document.getElementById('login');
-		var y=document.getElementById('register');
-		var z=document.getElementById('btn');
-		function register()
-		{
-			x.style.left='-400px';
-			y.style.left='50px';
-			z.style.left='110px';
-		}
-		function login()
-		{
-			x.style.left='50px';
-			y.style.left='450px';
-			z.style.left='0px';
-		}
-	</script>
-	<script>
-        var modal = document.getElementById('login-form');
-        window.onclick = function(event) 
-        {
-            if (event.target == modal) 
-            {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-
-
-
-    
 </body>
 </html>

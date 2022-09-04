@@ -15,6 +15,11 @@
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
+  
+
+
+
+
 </head>
 <body>
    
@@ -43,7 +48,7 @@
 
 <section class="home">
 
-   <div class="swiper home-slider">
+<div class="swiper home-slider">
 
       <div class="swiper-wrapper">
 
@@ -114,32 +119,32 @@
 
       <div class="box">
          <img src="images/decoration.jpg" alt="">
-         <h3>Decoration</h3>
+         <h3><a href="decoration.php" class="btn">Decoration </a></h3>
       </div>
 
       <div class="box">
          <img src="images/catering.jpg" alt="">
-         <h3>Catering</h3>
+         <h3><a href="decoration.php" class="btn">Catering</a></h3>
       </div>
 
       <div class="box">
          <img src="images/photography.jpg" alt="">
-         <h3>Photography</h3>
+         <h3><a href="decoration.php" class="btn">Photography </a></h3>
       </div>
 
       <div class="box">
          <img src="images/music.jpg" alt="">
-         <h3>Music</h3>
+         <h3><a href="decoration.php" class="btn">Music </a></h3>
       </div>
 
       <div class="box">
          <img src="images/invitation.jpg" alt="">
-         <h3>Invitation Card</h3>
+         <h3><a href="decoration.php" class="btn">Invitation Card </a></h3>
       </div>
 
       <div class="box">
          <img src="images/kids.jpg" alt="">
-         <h3>Kids Section</h3>
+         <h3><a href="decoration.php" class="btn">Kids Section </a></h3>
       </div>
 
       
