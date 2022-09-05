@@ -104,7 +104,8 @@ if (isset($_POST['submit'])) {
 				<input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
 			</div>
 			<div class="input-group">
-				<button name="submit" class="btn">Login</button>
+				<button name="submit" class="btn"> Login </button>
+            
 			</div>
 			<p class="login-register-text">Don't have an account? <a href="registration.php" style="color: #6fdd97;" >Register Here</a>.</p>
 		</form>
