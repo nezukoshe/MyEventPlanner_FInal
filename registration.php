@@ -1,253 +1,88 @@
-<?php 
+<?php
 
-include 'login_form.php';
+include 'config.php';
 
-error_reporting(0);
+if(isset($_POST['create'])){
+    $name = mysqli_real_escape_string($conn, $_POST['username']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = mysqli_real_escape_string($conn, md5($_POST['pass']));
+    $cpassword = mysqli_real_escape_string($conn, md5($_POST['cpass']));
+    $address = mysqli_real_escape_string($conn, $_POST['address']);
+    $phone = mysqli_real_escape_string($conn, $_POST['phone']);
+    $gender = mysqli_real_escape_string($conn, $_POST['gender']);
+    $subscribe = mysqli_real_escape_string($conn, $_POST['subscribe']);
 
-session_start();
+    $select = mysqli_query($conn, "SELECT * FROM `customer` WHERE email = '$email' AND password = '$password'") or die('query failed');
 
-if (isset($_SESSION['username'])) {
-    header("Location: login.php");
+    if(mysqli_num_rows($select) > 0){
+        $message[] = 'user already exists';
+    }else{
+        if($password != $cpassword){
+            $message[] = 'passwords do not match!';
+        }else{
+            $insert = mysqli_query($conn, "INSERT INTO `customer`(name, email, password, address, phone, gender, subscription) VALUES 
+            ('$name', '$email', '$password', '$address', '$phone', '$gender', $subscribe)") or die('query failed');
+
+            if($insert){
+                $message[] = "Registration Successful!";
+                header('location:login.php');
+            }else{
+                $message[] = "Registration Failed!";
+            }
+        }
+    }
 }
-
-if (isset($_POST['submit'])) {
-	$username = $_POST['username'];
-	$email = $_POST['email'];
-	$password = md5($_POST['password']);
-	$cpassword = md5($_POST['cpassword']);
-
-	if ($password == $cpassword) {
-		$sql = "SELECT * FROM users WHERE email='$email'";
-		$result = mysqli_query($conn, $sql);
-		if (!$result->num_rows > 0) {
-			$sql = "INSERT INTO users (username, email, password)
-					VALUES ('$username', '$email', '$password')";
-			$result = mysqli_query($conn, $sql);
-			if ($result) {
-				echo "<script>alert('Wow! User Registration Completed.')</script>";
-				$username = "";
-				$email = "";
-				$_POST['password'] = "";
-				$_POST['cpassword'] = "";
-			} else {
-				echo "<script>alert('Woops! Something Wrong Went.')</script>";
-			}
-		} else {
-			echo "<script>alert('Woops! Email Already Exists.')</script>";
-		}
-		
-	} else {
-		echo "<script>alert('Password Not Matched.')</script>";
-	}
-}
-
 ?>
-
-
-
-
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Register</title>
-<!-- swiper css link  -->
-<link rel="stylesheet"  type="text/css"  href="style.css">
-<link rel="stylesheet"  type="text/css"
- href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
-
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" type="text/css" href="style.css">
-
- <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-
-   
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-   <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
-
-
-
-
-    
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+    <link rel="stylesheet" type="text/css" href="css/registration.css">
 </head>
+
 <body>
+<div class="registration_box">
+    <img src="css/images/avatar.jpg" class="avatar">
+    <h1>SignUp</h1>
+    <?php
 
-
-
-<section class="header">
-
-   <a href="home.php" class="logo">tourbros.</a>
-
-   <nav class="navbar">
-      <a href="home.php">home</a>
-      <a href="about.php">about</a>
-      <a href="package.php">package</a>
-      <a href="book.php">book</a>
-      <a href="login.php">login</a>
-      <a href="contactus.php">Contact Us</a>
-   </nav>
-
-   <div id="menu-btn" class="fas fa-bars"></div>
-
-</section>
-
-<!-- header section ends -->
-
-
-<!--login  start-->
-
-
-<section class="login">
-
-<div class="container">
-		<form action="" method="POST" class="login-email">
-            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
-			<div class="input-group">
-				<input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" required>
-			</div>
-			<div class="input-group">
-				<input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
-			</div>
-			<div class="input-group">
-				<input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
-            </div>
-            <div class="input-group">
-				<input type="password" placeholder="Confirm Password" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
-			</div>
-			<div class="input-group">
-				<button name="submit" class="btn">Register</button>
-			</div>
-			<p class="login-register-text">Have an account? <a href="login.php" style="color: #6fdd97;">Login Here</a>.</p>
-		</form>
-	</div>
-</sectiom>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--login  close-->
-
-
-<!-- footer section starts  -->
-
-<section class="footer">
-
-   <div class="box-container">
-
-      <div class="box">
-         <h3>quick links</h3>
-         <a href="home.php"> <i class="fas fa-angle-right"></i> home</a>
-         <a href="about.php"> <i class="fas fa-angle-right"></i> about</a>
-         <a href="package.php"> <i class="fas fa-angle-right"></i> package</a>
-         <a href="book.php"> <i class="fas fa-angle-right"></i> book</a>
-         <a href="login.php"> <i class="fas fa-angle-right"></i> login</a>
-      </div>
-
-      <div class="box">
-         <h3>extra links</h3>
-         <a href="#"> <i class="fas fa-angle-right"></i> ask questions</a>
-         <a href="#"> <i class="fas fa-angle-right"></i> about us</a>
-         <a href="#"> <i class="fas fa-angle-right"></i> privacy policy</a>
-         <a href="#"> <i class="fas fa-angle-right"></i> terms of use</a>
-      </div>
-
-      <div class="box">
-         <h3>contact info</h3>
-         <a href="#"> <i class="fas fa-phone"></i> +01733110068 </a>
-         <a href="#"> <i class="fas fa-phone"></i> +01733110064 </a>
-         <a href="#"> <i class="fas fa-envelope"></i> bony@gmail.com </a>
-         <a href="#"> <i class="fas fa-envelope"></i> raffin@gmail.com </a>
-         <a href="#"> <i class="fas fa-map"></i> mirpur, dhaka - 1216 </a>
-      </div>
-
-      <div class="box">
-         <h3>follow us</h3>
-         <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-         <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-         <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-         <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-      </div>
-
-   </div>
-
-   <div class="credit"> created by <span>AB & DM</span> | all rights reserved! </div>
-
-</section>
-
-<!-- footer section ends -->
-
-
-
-
-
-
-
-
-
-<!-- swiper js link  -->
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
-
-
-
-
-
-<script>
-        var x=document.getElementById('login');
-		var y=document.getElementById('register');
-		var z=document.getElementById('btn');
-		function register()
-		{
-			x.style.left='-400px';
-			y.style.left='50px';
-			z.style.left='110px';
-		}
-		function login()
-		{
-			x.style.left='50px';
-			y.style.left='450px';
-			z.style.left='0px';
-		}
-	</script>
-	<script>
-        var modal = document.getElementById('login-form');
-        window.onclick = function(event) 
-        {
-            if (event.target == modal) 
-            {
-                modal.style.display = "none";
-            }
+    if (isset($message)){
+        foreach ($message as $message){
+            echo '<div class="message">'.$message.'</div>';
         }
-    </script>
+    }
+    ?>
 
-
-
-    
+    <form action="" method="post">
+        <div class="user-details">
+            <div class="inputs">
+                <p>Username</p>
+                <input type="text" name="username" placeholder="Enter Username" required>
+                <p>Email</p>
+                <input type="email" name="email" placeholder="example@domain.com" required>
+                <p>Password</p>
+                <input type="password" name="pass" placeholder="Enter Password" required>
+                <p>Confirm password</p>
+                <input type="password" name="cpass" placeholder="Confirm Password" required>
+                <p>Address</p>
+                <input type="text" name="address" placeholder="Enter Address" required>
+                <p>Phone</p>
+                <input type="tel" name="phone" placeholder="+8801xxxxxxxxx" required>
+            </div>
+            <p class="gname">Gender</p>
+            <input type="radio" name="gender" value="Male" required>Male
+            <input type="radio" name="gender" value="Female">Female
+            <input type="radio" name="gender" value="Other">Other<br>
+            <img src="css/images/Subscribe.jpg" class="subscription"><br>
+            <input type="radio" class="radiobutton2" name="subscribe" value="1" required>Subscribe!
+            <input type="radio" class="radioButton2" name="subscribe" value="0">Skip for now<br>
+            <input type="submit" class="inputs" name="create" value="SignUp">
+            <a href="login.php">Already have an account? Login now!</a>
+        </div>
+    </form>
+</div>
 </body>
 </html>
