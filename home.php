@@ -139,7 +139,7 @@
 
       <div class="box">
          <img src="images/invitation.jpg" alt="">
-         <h3><a href="decoration.php" class="btn">Invitation Card </a></h3>
+         <h3><a href="card.php" class="btn">Invitation Card </a></h3>
       </div>
 
       <div class="box">
