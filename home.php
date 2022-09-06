@@ -124,17 +124,17 @@
 
       <div class="box">
          <img src="images/catering.jpg" alt="">
-         <h3><a href="decoration.php" class="btn">Catering</a></h3>
+         <h3><a href="catering.php" class="btn">Catering</a></h3>
       </div>
 
       <div class="box">
          <img src="images/photography.jpg" alt="">
-         <h3><a href="decoration.php" class="btn">Photography </a></h3>
+         <h3><a href="photography.php" class="btn">Photography </a></h3>
       </div>
 
       <div class="box">
          <img src="images/music.jpg" alt="">
-         <h3><a href="decoration.php" class="btn">Music </a></h3>
+         <h3><a href="music.php" class="btn">Music </a></h3>
       </div>
 
       <div class="box">
@@ -144,7 +144,7 @@
 
       <div class="box">
          <img src="images/kids.jpg" alt="">
-         <h3><a href="decoration.php" class="btn">Kids Section </a></h3>
+         <h3><a href="kids.php" class="btn">Kids Section </a></h3>
       </div>
 
       

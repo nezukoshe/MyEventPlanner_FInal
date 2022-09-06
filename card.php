@@ -37,7 +37,7 @@
 .column {
  float:left;
 
-  width: 41rem;
+  width: 37rem;
   height: 45rem;
   padding: 10px;
   
@@ -125,7 +125,7 @@
 <!-- header section ends -->
 
 <div class="heading" style="background:url(images/inn3.jpg)  no-repeat" width="600" height="300">
-   <h1>about us</h1>
+   <h1>Invitation card</h1>
 </div>
 
 

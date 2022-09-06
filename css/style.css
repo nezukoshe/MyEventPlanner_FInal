@@ -447,7 +447,7 @@ section{
 
 .services .box-container .box img{
    height: 15rem;
-   width : 17rem
+   width : 15rem
 }
 
 
@@ -464,15 +464,9 @@ section{
    background: #ffb9ff;
    margin-top: 1rem;
    color: var(--pp2);
-   font-size: 1.7rem;
+   font-size: 1.5rem;
    padding:1rem 3rem;
    cursor: pointer;
-
-
-   
-  
-   
-   
 }
 
 .services .box-container .box .btn:hover{

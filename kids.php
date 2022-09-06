@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>about</title>
@@ -15,6 +16,80 @@
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+
+
+
+   <style>
+* {
+  box-sizing: border-box;
+}
+
+#ABC {
+      background-color: #fff;
+
+    }
+
+
+
+
+
+
+.column {
+ float:left;
+
+  width: 37rem;
+  height: 45rem;
+  padding: 10px;
+  
+}
+
+/* Clearfix (clear floats) */
+.row1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row2::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row3::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+
+
+
+
+</style>
+
+
+
 
 </head>
 <body>
@@ -30,28 +105,130 @@
    <a href="home.php" class="logo">My Event Planner.</a>
 
    <nav class="navbar">
-      <a href="home.php">home</a>
-      <a href="about.php">about</a>
-      <a href="package.php">package</a>
-      <a href="book.php">book</a>
-      <a href="login.php">login</a>
-      <a href="contactus.php">Contact Us</a>
+      <a href="home.php">Back</a>
+      
    </nav>
 
    <div id="menu-btn" class="fas fa-bars"></div>
 
 </section>
 
+
+
+
+
+
+
+
+
+
 <!-- header section ends -->
 
-<div class="heading" style="background:url(images/common.jpg)  no-repeat" width="600" height="300">
-   <h1>about us</h1>
+<div class="heading" style="background:url(images/inn3.jpg)  no-repeat" width="600" height="300">
+   <h1>Invitation card</h1>
 </div>
 
 
 
 
 
+
+
+<!-- image section start -->
+
+
+<section class="footer" id="ABC">
+
+
+<div class="row1">
+  <div class="column">
+    <img src="images/inv1.jpg"  style="width:100%">
+    <div class="overlay">300 TK</div>
+  </div>
+  <div class="column">
+    <img src="images/inv2.jpg"  style="width:100%">
+    <div class="overlay">250 TK</div>
+  </div>
+  <div class="column">
+    <img src="images/inv3.jpg"  style="width:100%">
+    <div class="overlay">250 TK</div>
+  </div>
+  <div class="column">
+    <img src="images/inv14.jpg"  style="width:100% ">
+    <div class="overlay">150 TK</div>
+  </div>
+</div>
+
+
+
+<div class="row2">
+  <div class="column">
+    <img src="images/inv5.jpg"  style="width:100%">
+    <div class="overlay">300 TK</div>
+  </div>
+  <div class="column">
+    <img src="images/inv6.png"  style="width:100%">
+    <div class="overlay">100 TK</div>
+  </div>
+  <div class="column">
+    <img src="images/inv17.jpg"  style="width:100%">
+    <div class="overlay">100 TK</div>
+  </div>
+  <div class="column">
+    <img src="images/inv20.jfif"  style="width:100%">
+    <div class="overlay">150 TK</div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="row3">
+  <div class="column">
+    <img src="images/inv9.jpg" style="width:100%">
+    <div class="overlay">100 TK</div>
+  </div>
+  <div class="column">
+    <img src="images/inv30.jpg"  style="width:100% ">
+    <div class="overlay">100 TK</div>
+  </div>
+  <div class="column">
+    <img src="images/inv12.jpg"  style="width:100%">
+    <div class="overlay">100 TK</div>
+  </div>
+  <div class="column">
+    <img src="images/inv31.jfif" style="width:100%">
+    <div class="overlay">150 TK</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- image section ends -->
 
 
 
