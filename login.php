@@ -77,6 +77,7 @@ exit();
 	    
 	    <!-- Customizable CSS -->
 	    <link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="css/style.css">
 	    <link rel="stylesheet" href="assets/css/green.css">
 	    <link rel="stylesheet" href="assets/css/owl.carousel.css">
 		<link rel="stylesheet" href="assets/css/owl.transitions.css">
@@ -135,6 +136,24 @@ error:function (){}
 
 
 
+
+<meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>home</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+
+
+
 	</head>
     <body class="cnt-home">
 	
@@ -143,27 +162,57 @@ error:function (){}
 		<!-- ============================================== HEADER ============================================== -->
 <header class="header-style-1">
 
+
+
+
+<section class="header">
+
+   <a href="home.php" class="logo">My Event Planner.</a>
+
+   <nav class="navbar">
+      <a href="home.php">home</a>
+      <a href="about.php">about</a>
+      <a href="package.php">package</a>
+      <a href="book.php">book</a>
+      <a href="login.php">login</a>
+      <a href="contactus.php">Contact Us</a>
+	  
+   </nav>
+
+   <div id="menu-btn" class="fas fa-bars"></div>
+
+</section>
+
 	<!-- ============================================== TOP MENU ============================================== -->
-<?php include('includes/top-header.php');?>
+	<?php include('includes/top-header.php');?>
 <!-- ============================================== TOP MENU : END ============================================== -->
-<?php include('includes/main-header.php');?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<!-- ============================================== NAVBAR ============================================== -->
-<?php include('includes/menu-bar.php');?>
+
 <!-- ============================================== NAVBAR : END ============================================== -->
 
 </header>
 
 <!-- ============================================== HEADER : END ============================================== -->
-<div class="breadcrumb">
-	<div class="container">
-		<div class="breadcrumb-inner">
-			<ul class="list-inline list-unstyled">
-				<li><a href="home.html">Home</a></li>
-				<li class='active'>Authentication</li>
-			</ul>
-		</div><!-- /.breadcrumb-inner -->
-	</div><!-- /.container -->
-</div><!-- /.breadcrumb -->
+
 
 <div class="body-content outer-top-bd">
 	<div class="container">
@@ -193,7 +242,7 @@ echo htmlentities($_SESSION['errmsg']="");
 		<div class="radio outer-xs">
 		  	<a href="forgot-password.php" class="forgot-password pull-right">Forgot your Password?</a>
 		</div>
-	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button" name="login">Login</button>
+	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button" name="login"><a href="book.php">Login </button></a>
 	</form>					
 </div>
 <!-- Sign-in -->
@@ -201,7 +250,7 @@ echo htmlentities($_SESSION['errmsg']="");
 <!-- create a new account -->
 <div class="col-md-6 col-sm-6 create-new-account">
 	<h4 class="checkout-subtitle">create a new account</h4>
-	<p class="text title-tag-line">Create your own Shopping account.</p>
+	<p class="text title-tag-line">Create your  account.</p>
 	<form class="register-form outer-top-xs" role="form" method="post" name="register" onSubmit="return valid();">
 <div class="form-group">
 	    	<label class="info-title" for="fullname">Full Name <span>*</span></label>
@@ -233,58 +282,84 @@ echo htmlentities($_SESSION['errmsg']="");
 
 	  	<button type="submit" name="submit" class="btn-upper btn btn-primary checkout-page-button" id="submit">Sign Up</button>
 	</form>
-	<span class="checkout-subtitle outer-top-xs">Sign Up Today And You'll Be Able To :  </span>
-	<div class="checkbox">
-	  	<label class="checkbox">
-		  	Speed your way through the checkout.
-		</label>
-		<label class="checkbox">
-		Track your orders easily.
-		</label>
-		<label class="checkbox">
- Keep a record of all your purchases.
-		</label>
-	</div>
+	
+
 </div>	
+
+
+
 <!-- create a new account -->			</div><!-- /.row -->
 		</div>
-<?php include('includes/brands-slider.php');?>
+
+
+
+<section class="footer">
+
+<div class="box-container">
+
+   <div class="box">
+	  <h3>quick links</h3>
+	  <a href="home.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Home</a>
+	  <a href="about.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>About Us</a>
+	  <a href="services.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Services</a>
+	  <a href="gallery.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Gallery</a>
+	  <a href="combo.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Combo</a>
+	  <a href="reservation.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Reservation</a>
+   </div>
+
+   <div class="box">
+	  <h3>extra links</h3>
+	  <a href="#"   style="text-decoration: none"> <i class="fas fa-angle-right"></i> ask questions</a>
+	  <a href="#"   style="text-decoration: none"> <i class="fas fa-angle-right"></i> about us</a>
+	  <a href="#"   style="text-decoration: none"> <i class="fas fa-angle-right"></i> privacy policy</a>
+	  <a href="#"   style="text-decoration: none"> <i class="fas fa-angle-right"></i> terms of use</a>
+   </div>
+
+   <div class="box">
+	  <h3>contact info</h3>
+	  <a href="#"   style="text-decoration: none"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+	  <a href="#"   style="text-decoration: none"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+	  <a href="#"   style="text-decoration: none"> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </a>
+	  <a href="#"   style="text-decoration: none"> <i class="fas fa-map"></i> mumbai, india - 400104 </a>
+   </div>
+
+   <div class="box">
+	  <h3>follow us</h3>
+	  <a href="#" style="text-decoration: none"> <i class="fab fa-facebook-f"></i> facebook </a>
+	  <a href="#" style="text-decoration: none"> <i class="fab fa-twitter"></i> twitter </a>
+	  <a href="#" style="text-decoration: none"> <i class="fab fa-instagram"></i> instagram </a>
+	  <a href="#" style="text-decoration: none"> <i class="fab fa-linkedin"></i> linkedin </a>
+   </div>
+
 </div>
-</div>
-<?php include('includes/footer.php');?>
-	<script src="assets/js/jquery-1.11.1.min.js"></script>
-	
-	<script src="assets/js/bootstrap.min.js"></script>
-	
-	<script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
-	<script src="assets/js/owl.carousel.min.js"></script>
-	
-	<script src="assets/js/echo.min.js"></script>
-	<script src="assets/js/jquery.easing-1.3.min.js"></script>
-	<script src="assets/js/bootstrap-slider.min.js"></script>
-    <script src="assets/js/jquery.rateit.min.js"></script>
-    <script type="text/javascript" src="assets/js/lightbox.min.js"></script>
-    <script src="assets/js/bootstrap-select.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-	<script src="assets/js/scripts.js"></script>
+
+<div class="credit"> created by <span>Jaasia & Oyshe</span> | all rights reserved! </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<!-- For demo purposes – can be removed on production -->
 	
-	<script src="switchstylesheet/switchstylesheet.js"></script>
-	
-	<script>
-		$(document).ready(function(){ 
-			$(".changecolor").switchstylesheet( { seperator:"color"} );
-			$('.show-theme-options').click(function(){
-				$(this).parent().toggleClass('open');
-				return false;
-			});
-		});
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-		$(window).bind("load", function() {
-		   $('.show-theme-options').delay(2000).trigger('click');
-		});
-	</script>
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+
 	<!-- For demo purposes – can be removed on production : End -->
 
 	

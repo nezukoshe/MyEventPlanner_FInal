@@ -123,8 +123,11 @@ section{
 
 
 .header .navbar a{
+   
    font-size: 1.5rem;
    margin-left: 2rem;
+   margin-top: .5rem;
+   margin-bottom: .5rem;
    color:white;
 }
 
@@ -133,13 +136,11 @@ section{
 }
 
 
-.card .header h1{
 
-   color: var(--pp3);
-   
-   
-   
-   }
+
+
+
+
 
    .gallery__img {
       width: 100%;
