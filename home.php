@@ -15,11 +15,6 @@
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
-  
-
-
-
-
 </head>
 <body>
    
@@ -34,7 +29,7 @@
       <a href="about.php">about</a>
       <a href="package.php">package</a>
       <a href="book.php">book</a>
-      <a href="login.php">login</a>
+      <a href="index1.php">login</a>
       <a href="contactus.php">Contact Us</a>
    </nav>
 
