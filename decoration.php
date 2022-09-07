@@ -125,7 +125,7 @@
 <!-- header section ends -->
 
 <div class="heading" style="background:url(images/inn3.jpg)  no-repeat" width="600" height="300">
-   <h1>Invitation card</h1>
+   <h1>Decoration</h1>
 </div>
 
 
@@ -142,19 +142,19 @@
 
 <div class="row1">
   <div class="column">
-    <img src="images/inv1.jpg"  style="width:100%">
+    <img src="images/dec1.jpg"  style="width:100%">
     <div class="overlay">300 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv2.jpg"  style="width:100%">
+    <img src="images/dec2.jpg"  style="width:100%">
     <div class="overlay">250 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv3.jpg"  style="width:100%">
+    <img src="images/dec3.jpg"  style="width:100%">
     <div class="overlay">250 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv14.jpg"  style="width:100% ">
+    <img src="images/dec4.jpg"  style="width:100% ">
     <div class="overlay">150 TK</div>
   </div>
 </div>
@@ -163,19 +163,19 @@
 
 <div class="row2">
   <div class="column">
-    <img src="images/inv5.jpg"  style="width:100%">
+    <img src="images/dec5.jfif"  style="width:100%">
     <div class="overlay">300 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv6.png"  style="width:100%">
+    <img src="images/dec6.jpeg"  style="width:100%">
     <div class="overlay">100 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv17.jpg"  style="width:100%">
+    <img src="images/dec7.jpg"  style="width:100%">
     <div class="overlay">100 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv20.jfif"  style="width:100%">
+    <img src="images/dec8.jpg"  style="width:100%">
     <div class="overlay">150 TK</div>
   </div>
 </div>
@@ -187,46 +187,24 @@
 
 <div class="row3">
   <div class="column">
-    <img src="images/inv9.jpg" style="width:100%">
+    <img src="images/dec9.jpg" style="width:100%">
     <div class="overlay">100 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv30.jpg"  style="width:100% ">
+    <img src="images/dec10.jpg"  style="width:100% ">
     <div class="overlay">100 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv12.jpg"  style="width:100%">
+    <img src="images/dec11.jpg"  style="width:100%">
     <div class="overlay">100 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv31.jfif" style="width:100%">
+    <img src="images/dec12.jpg" style="width:100%">
     <div class="overlay">150 TK</div>
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
 </section>
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- image section ends -->
 
