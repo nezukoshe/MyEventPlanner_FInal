@@ -58,16 +58,16 @@
             <input type="date" id="date_picker" name="dateofevent">
             <script language="javascript">
 
-// var disabledDays = ["2022-08-31", "2022-09-02"];
-//     function disableAllTheseDays(date) {
-//         var m = date.getMonth(), d = date.getDate(), y = date.getFullYear();
-//         for (i = 0; i < disabledDays.length; i++) {
-//             if($.inArray((m+1) + '-' + d + '-' + y,disabledDays) != -1) {
-//                 return [false];
-//             }
-//         }
-//         return [true];
-//   }
+            // var disabledDays = ["2022-08-31", "2022-09-02"];
+            // function disableAllTheseDays(date) {
+            // var m = date.getMonth(), d = date.getDate(), y = date.getFullYear();
+            // for (i = 0; i < disabledDays.length; i++) {
+            // if($.inArray((m+1) + '-' + d + '-' + y,disabledDays) != -1) {
+            //      return [false];
+            //    }
+            // }
+            // return [true];
+            // }
                //alert("Hello! I am an alert box!!");
             var today = new Date();
             var dd = String(today.getDate()).padStart(2, '0');
@@ -83,7 +83,6 @@
             $('#date_picker').attr('min', today);
             </script>
             
-
          </div>
 
          <div class="inputBox">

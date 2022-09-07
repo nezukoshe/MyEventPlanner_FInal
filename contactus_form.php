@@ -1,6 +1,6 @@
 <?php
 
-   $connection = mysqli_connect('localhost','root','','form');
+   $connection = mysqli_connect('localhost','root','','mm_ecom');
 
    if(isset($_POST['send'])){
       $name = $_POST['name'];
