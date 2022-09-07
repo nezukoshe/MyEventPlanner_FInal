@@ -56,18 +56,14 @@
   display: table;
 }
 
-.row3::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+
 
 .overlay {
   position: absolute; 
   bottom: 0; 
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1; 
+  color: #fff; 
   width: 100%;
   transition: .5s ease;
   opacity:0;
@@ -82,14 +78,7 @@
 }
 
 
-
-
-
-
 </style>
-
-
-
 
 </head>
 <body>
@@ -114,18 +103,11 @@
 </section>
 
 
-
-
-
-
-
-
-
-
 <!-- header section ends -->
 
+
 <div class="heading" style="background:url(images/inn3.jpg)  no-repeat" width="600" height="300">
-   <h1>Invitation card</h1>
+   <h1>Music and Band</h1>
 </div>
 
 
@@ -142,19 +124,19 @@
 
 <div class="row1">
   <div class="column">
-    <img src="images/inv1.jpg"  style="width:100%">
+    <img src="images/mus1.jpg"  style="width:100%">
     <div class="overlay">300 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv2.jpg"  style="width:100%">
+    <img src="images/mus2.webp"  style="width:100%">
     <div class="overlay">250 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv3.jpg"  style="width:100%">
+    <img src="images/mus3.jfif"  style="width:100%">
     <div class="overlay">250 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv14.jpg"  style="width:100% ">
+    <img src="images/mus4.jfif"  style="width:100% ">
     <div class="overlay">150 TK</div>
   </div>
 </div>
@@ -163,56 +145,22 @@
 
 <div class="row2">
   <div class="column">
-    <img src="images/inv5.jpg"  style="width:100%">
+    <img src="images/mus5.jpg"  style="width:100%">
     <div class="overlay">300 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv6.png"  style="width:100%">
+    <img src="images/mus6.jpg"  style="width:100%">
     <div class="overlay">100 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv17.jpg"  style="width:100%">
+    <img src="images/mus7.jpeg"  style="width:100%">
     <div class="overlay">100 TK</div>
   </div>
   <div class="column">
-    <img src="images/inv20.jfif"  style="width:100%">
+    <img src="images/mus8.jpg"  style="width:100%">
     <div class="overlay">150 TK</div>
   </div>
 </div>
-
-
-
-
-
-
-<div class="row3">
-  <div class="column">
-    <img src="images/inv9.jpg" style="width:100%">
-    <div class="overlay">100 TK</div>
-  </div>
-  <div class="column">
-    <img src="images/inv30.jpg"  style="width:100% ">
-    <div class="overlay">100 TK</div>
-  </div>
-  <div class="column">
-    <img src="images/inv12.jpg"  style="width:100%">
-    <div class="overlay">100 TK</div>
-  </div>
-  <div class="column">
-    <img src="images/inv31.jfif" style="width:100%">
-    <div class="overlay">150 TK</div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
 
 
 </section>
