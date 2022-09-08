@@ -6,7 +6,7 @@
 				</a>
 
 			  	<a class="brand" href="index.html">
-				  Food Mood | Admin Panel
+				  My Event Planner | Admin Panel
 			  	</a>
 
 				<div class="nav-collapse collapse navbar-inverse-collapse">

@@ -1,13 +1,98 @@
+<?php
+// Set email variables
+$email_to = 'andy_tvw@yahoo.co.uk';
+$email_subject = 'Form submission';
+// Set required fields
+$required_fields = array('fullname','fulladdress','email','comment','checkforblankfield');
+// set error messages
+$error_messages = array(
+ 'fullname' => 'Please enter a Name to proceed.',
+ 'fulladdress' => 'Please enter your Contact Address to proceed.',
+ 'email' => 'Please enter a valid Email Address to continue.',
+ 'comment' => 'Please enter your Message to continue.',
+ 'checkforblankfield' => 'You need to select a Date.' // check for NO input into datepicker form
+);
+// Set form status
+$form_complete = FALSE;
+// configure validation array
+$validation = array();
+// check form submittal
+if(!empty($_POST)) {
+ // Sanitise POST array
+ foreach($_POST as $key => $value) $_POST[$key] = remove_email_injection(trim($value));
+ 
+ // Loop into required fields and make sure they match our needs
+ foreach($required_fields as $field) {  
+  // the field has been submitted?
+  if(!array_key_exists($field, $_POST)) array_push($validation, $field);
+  
+  // check there is information in the field?
+  if($_POST[$field] == '') array_push($validation, $field);
+  
+  // validate the email address supplied
+  if($field == 'email') if(!validate_email_address($_POST[$field])) array_push($validation, $field);
+ }
+ 
+ // basic validation result
+ if(count($validation) == 0) {
+  // Prepare our content string
+  $email_content = 'New Website Comment: ' . "\n\n";
+  
+  // simple email content
+  foreach($_POST as $key => $value) {
+   if($key != 'submit') $email_content .= $key . ': ' . $value . "\n";
+  }
+  
+  // if validation passed ok then send the email
+  mail($email_to, $email_subject, $email_content);
+  
+  // Update form switch
+  $form_complete = TRUE;
+ }
+}
+function validate_email_address($email = FALSE) {
+ return (preg_match('/^[^@\s]+@([-a-z0-9]+\.)+[a-z]{2,}$/i', $email))? TRUE : FALSE;
+}
+function remove_email_injection($field = FALSE) {
+   return (str_ireplace(array("\r", "\n", "%0a", "%0d", "Content-Type:", "bcc:","to:","cc:"), '', $field));
+}
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
+ <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/redmond/jquery-ui.css" rel=  "stylesheet" type="text/css"/>
+    
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/mootools/1.3.0/mootools-yui-compressed.js"></script>
+   
+    <script type="text/javascript" src="contact/validation/validation.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.js"></script>
+   
+ <script type="text/javascript">
+  var nameError = '<?php echo $error_messages['fullname']; ?>';
+  var fulladdress ='<?php echo $error_messages['fulladdress']; ?>';
+  var emailError = '<?php echo $error_messages['email']; ?>';
+  var commentError = '<?php echo $error_messages['comment']; ?>';
+  var checkforblankfield = '<?php echo $error_messages['checkforblankfield']; ?>';
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+    </script>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>book</title>
 
    <!-- swiper css link  -->
-   <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
    <!-- font awesome cdn link  -->
@@ -16,6 +101,10 @@
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
+
+
+
+
 </head>
 <body>
    
@@ -23,7 +112,7 @@
 
 <section class="header">
 
-   <a href="home.php" class="logo">My Event Planner.</a>
+   <a href="home.php" class="logo">My Event planner </a>
 
    <nav class="navbar">
       <a href="home.php">home</a>
@@ -40,7 +129,7 @@
 
 <!-- header section ends -->
 
-<div class="heading" style="background:url(images/common.jpg) no-repeat">
+<div class="heading" style="background:url(images/book.jpeg) no-repeat">
    <h1>book now</h1>
 </div>
 
@@ -48,52 +137,11 @@
 
 <section class="booking">
 
-   <h1 class="heading-title">Book your Event</h1>
+   <h1 class="heading-title">Confirm Your Event </h1>
 
    <form action="book_form.php" method="post" class="book-form">
 
       <div class="flex">
-         <div class="inputBox">
-            <span>Event Date :</span>
-            <input type="date" id="date_picker" name="dateofevent">
-            <script language="javascript">
-
-            // var disabledDays = ["2022-08-31", "2022-09-02"];
-            // function disableAllTheseDays(date) {
-            // var m = date.getMonth(), d = date.getDate(), y = date.getFullYear();
-            // for (i = 0; i < disabledDays.length; i++) {
-            // if($.inArray((m+1) + '-' + d + '-' + y,disabledDays) != -1) {
-            //      return [false];
-            //    }
-            // }
-            // return [true];
-            // }
-               //alert("Hello! I am an alert box!!");
-            var today = new Date();
-            var dd = String(today.getDate()).padStart(2, '0');
-
-            var ddi = parseInt(dd)
-            ddi += 1;
-            dd = ddi.toString();
-
-            var mm = String(today.getMonth() + 1).padStart(2, '0');
-            var yyyy = today.getFullYear();
-
-            today = yyyy + '-' + mm + '-' + dd;
-            $('#date_picker').attr('min', today);
-            </script>
-            
-         </div>
-
-         <div class="inputBox">
-            <span>Event Time :</span>
-            <select placeholder="event time" name="timeofevent">
-               <option value="Lunch">Lunch</option>
-               <option value="Dinner">Dinner</option>
-               <option value="Afternoon">Afternoon</option>
-            </select>
-         </div>
-
          <div class="inputBox">
             <span>name :</span>
             <input type="text" placeholder="enter your name" name="name">
@@ -102,80 +150,83 @@
             <span>email :</span>
             <input type="email" placeholder="enter your email" name="email">
          </div>
-         <div class="inputBox">
-            <span>phone :</span>
-            <input type="number" placeholder="enter your number" name="phone">
-         </div>
+        
          <div class="inputBox">
             <span>address :</span>
             <input type="text" placeholder="enter your address" name="address">
          </div>
-         <div class="inputBox">
-            <span>Event Type :</span>
-            <select placeholder="event type" name="type">
-               <option value="Holud">Mehendi & Holud</option>
-               <option value="Reception">Marriage & Reception</option>
-               <option value="Wedding">4 Days Wedding</option>
-               <option value="Anniversary Party">Anniversary Party</option>
-               <option value="Engagement">Engagement</option>
-               <option value="Birthday Party">Birthday Party</option>
-               <option value="New Year Party">New Year Party</option>
-               <option value="Reunion Party">Reunion Party</option>
-               <option value="Corporate Events">Corporate Events</option>
-            </select>
-         </div>
-         <div class="inputBox">
-            <span>how many :</span>
-            <input type="number" placeholder="number of guests" name="guests">
-         </div>
-         <div class="inputBox">
-            <span>Stage id :</span>
-            <input type="number" placeholder="Stage ID" name="stage">
-         </div>
 
+         
          <div class="inputBox">
-            <span>Color Theme :</span>
-            <select placeholder="color theme" name="theme">
-               <option value="Red and Golden">Red and Golden</option>
-               <option value="Yellow and Green">Yellow and Green</option>
-               <option value="Pink and Golden">Pink and Golden</option>
-               <option value="Black and White">Black and White</option>
-               <option value="Blue and White">Blue and White</option>
-               <option value="Red and White">Red and White</option>
-               <option value="Others">Others</option>
-            </select>
-         </div>
-
-
-         <div class="inputBox">
-            <span>Photographer :</span>
-            <select placeholder="photographer" name="photographer">
-               <option value="1.Jaasia">1.Jaasia</option>
-               <option value="2.Oyshe">2.Oyshe</option>
-               <option value="3.Raffin">3.Raffin</option>
-               <option value="4.Farhan">4.Farhan</option>
-               <option value="5.Borno">5.Borno</option>
-            </select>
-         </div>
-
-         <div class="inputBox">
-            <span>Menu :</span>
-            <select placeholder="menu" name="menu">
-               <option value="1.Chinese">1.Chinese</option>
-               <option value="2.Deshi">2.Deshi</option>
-               <option value="3.Thai">3.Thai</option>
-            </select>
+            <span>Number of Guests :</span>
+            <input type="number" placeholder="Number of guests" name="guests">
          </div>
          
-
+        
          <div class="inputBox">
+            <span>Select your Date:</span>
+
+
+<!-- Start of datepicker -->
+<script>
+ $(document).ready(function()
+  {
+     $("#datepicker").datepicker();
+  });
+ </script>
+ 
+   
+<!--  $(selector).datepick({dateFormat: 'yyyy-mm-dd'});  for my example -->
+ <script> 
+   
+ 
+
+  $(function() {     
+       $.datepicker.setDefaults({dateFormat: 'DD, d  MM yy', autoSize: true,
+          minDate: -0, maxDate: '+1M +05D', showOn: 'button',
+         buttonImage: 'images/calendar-empty.gif', buttonImageOnly: true, });
+  $('input[name="Your Check In Date Is"],input[name="Your Check Out Date Is"]').datepicker();
+ 
+ }); 
+ 
+</script>
+ 
+     <!-- Start of  Date field input Block that i want to check for empty field on the datepicker -->
+<!-- how to take  what is inside .datepicker and work it into the code below -->
+
+ 
+
+
+ <div class="row">
+    
+    
+     
+    </div> <!-- end .row -->
+<!-- End of Block -->
+
+    <!-- Place the Selected Dates into .datepicker() and  Email -->
+ <script type="text/javascript">
+        $(function(){ 
+            $("input[name='Your Check In Date Is']").datepicker();
+            $("input[name='Your Check Out Date Is']").datepicker();
+        });
+    </script>  
+        
+    
+   
+    <input name="Your Check Out Date Is" maxlength="30" class="text ui-widget-content ui-corner-all" />
+   
+    <!-- End of datepicker  -->  
+
+</div>
+<div class="inputBox">
             <span>Description :</span>
-            <input type="text" name="description">
+            <input type="text" placeholder="details about your event" name="description">
          </div>
-         
-      </div>
 
-      <input type="submit" value="submit" class="btn" name="submit">
+</div>
+
+      <button type="submit" value="submit" class="btn" name="send"><a href="order-details.php">SEND</a></button>
 
    </form>
 
@@ -203,48 +254,48 @@
 
 <section class="footer">
 
-    <div class="box-container">
- 
-       <div class="box">
-          <h3>quick links</h3>
-          <a href="home.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Home</a>
-          <a href="about.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>About Us</a>
-          <a href="services.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Services</a>
-          <a href="gallery.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Gallery</a>
-          <a href="combo.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Combo</a>
-          <a href="reservation.php"   style="text-decoration: none"><i class="fas fa-angle-right"></i>Reservation</a>
-       </div>
- 
-       <div class="box">
-          <h3>extra links</h3>
-          <a href="#"   style="text-decoration: none"> <i class="fas fa-angle-right"></i> ask questions</a>
-          <a href="#"   style="text-decoration: none"> <i class="fas fa-angle-right"></i> about us</a>
-          <a href="#"   style="text-decoration: none"> <i class="fas fa-angle-right"></i> privacy policy</a>
-          <a href="#"   style="text-decoration: none"> <i class="fas fa-angle-right"></i> terms of use</a>
-       </div>
- 
-       <div class="box">
-          <h3>contact info</h3>
-          <a href="#"   style="text-decoration: none"> <i class="fas fa-phone"></i> +123-456-7890 </a>
-          <a href="#"   style="text-decoration: none"> <i class="fas fa-phone"></i> +111-222-3333 </a>
-          <a href="#"   style="text-decoration: none"> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </a>
-          <a href="#"   style="text-decoration: none"> <i class="fas fa-map"></i> mumbai, india - 400104 </a>
-       </div>
- 
-       <div class="box">
-          <h3>follow us</h3>
-          <a href="#" style="text-decoration: none"> <i class="fab fa-facebook-f"></i> facebook </a>
-          <a href="#" style="text-decoration: none"> <i class="fab fa-twitter"></i> twitter </a>
-          <a href="#" style="text-decoration: none"> <i class="fab fa-instagram"></i> instagram </a>
-          <a href="#" style="text-decoration: none"> <i class="fab fa-linkedin"></i> linkedin </a>
-       </div>
- 
-    </div>
- 
-    <div class="credit"> created by <span>Jaasia & Oyshe</span> | all rights reserved! </div>
- 
- </section>
- 
+   <div class="box-container">
+
+      <div class="box">
+         <h3>quick links</h3>
+         <a href="home.php"> <i class="fas fa-angle-right"></i> home</a>
+         <a href="about.php"> <i class="fas fa-angle-right"></i> about</a>
+         <a href="package.php"> <i class="fas fa-angle-right"></i> package</a>
+         <a href="book.php"> <i class="fas fa-angle-right"></i> book</a>
+         <a href="login.php"> <i class="fas fa-angle-right"></i> login</a>
+      </div>
+
+      <div class="box">
+         <h3>extra links</h3>
+         <a href="#"> <i class="fas fa-angle-right"></i> ask questions</a>
+         <a href="#"> <i class="fas fa-angle-right"></i> about us</a>
+         <a href="#"> <i class="fas fa-angle-right"></i> privacy policy</a>
+         <a href="#"> <i class="fas fa-angle-right"></i> terms of use</a>
+      </div>
+
+      <div class="box">
+         <h3>contact info</h3>
+         <a href="#"> <i class="fas fa-phone"></i> +01733110068 </a>
+         <a href="#"> <i class="fas fa-phone"></i> +01733110064 </a>
+         <a href="#"> <i class="fas fa-envelope"></i> bony@gmail.com </a>
+         <a href="#"> <i class="fas fa-envelope"></i> raffin@gmail.com </a>
+         <a href="#"> <i class="fas fa-map"></i> mirpur, dhaka - 1216 </a>
+      </div>
+
+      <div class="box">
+         <h3>follow us</h3>
+         <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+         <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+         <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+         <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+      </div>
+
+   </div>
+
+   <div class="credit"> created by <span>AB & DM</span> | all rights reserved! </div>
+
+</section>
+
 
 <!-- footer section ends -->
 
@@ -259,9 +310,16 @@
 <!-- swiper js link  -->
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
+
+<script language="javascript">
+<!--
+function myChanged(v){
+	alert("Hello, value has been changed : "+document.getElementById("date1").value+"["+v+"]");
+}
+//-->
+</script>
 
 </body>
 </html>

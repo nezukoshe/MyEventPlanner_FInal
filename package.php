@@ -28,7 +28,6 @@
       <a href="home.php">home</a>
       <a href="about.php">about</a>
       <a href="package.php">package</a>
-      <a href="book.php">book</a>
       <a href="login.php">login</a>
       <a href="contactus.php">Contact Us</a>
    </nav>
@@ -61,7 +60,7 @@
             <p>It's really tough to plan about two days !!! Then Why we are here? <br></p><p style="color:maroon">->  2 days package with all decoration,catering, music,photography 
 
             </p>
-            <a href="book.php" class="btn">book now</a>
+            <a href="index1.php" class="btn">book now</a>
          </div>
       </div>
 
@@ -72,7 +71,7 @@
          <div class="content">
             <h3>Marriage & Reception</h3>
             <p>This Days dont come regularly,why not making this memorable? <br></p><p style="color:maroon">->  2 days package with all decoration,catering, music,photography </p>
-            <a href="book.php" class="btn">book now</a>
+            <a href="index1.php" class="btn">book now</a>
          </div>
       </div>
 
@@ -83,7 +82,7 @@
          <div class="content">
             <h3>4 Days Wedding</h3>
             <p>Looking for a big package? Here it is ... <br></p><p style="color:maroon">-> 4  days package all decoration,catering, music,photography ,your desired stage </p>
-            <a href="book.php" class="btn">book now</a>
+            <a href="index1.php" class="btn">book now</a>
          </div>
       </div>
 
@@ -95,7 +94,7 @@
            
             <h3>Anniversary Party</h3>
             <p>Oh you are busy but want to give your loved one a surprise? No worries,we are here for you<br></p><p style="color:maroon">-> 1 day package with flowers,decoration, foods and also photography </p>
-            <a href="book.php" class="btn">book now</a>
+            <a href="index1.php" class="btn">book now</a>
          </div>
       </div>
 
@@ -107,7 +106,7 @@
          <h3>Engagement</h3>
          
             <p>This is the starting of two new lifes, why not make this day memorable? <br></p><p style="color:maroon">->  1 days package  </p>
-            <a href="book.php" class="btn">book now</a>
+            <a href="index1.php" class="btn">book now</a>
          </div>
       </div>
 
@@ -119,7 +118,7 @@
          <h3>Birthday Party</h3>
            
             <p>Getting old is fun, Give a surprise to your friend, partner & family<br></p><p style="color:maroon">-> 1 days package .</p>
-            <a href="book.php" class="btn">book now</a>
+            <a href="index1.php" class="btn">book now</a>
          </div>
       </div>
 
@@ -130,7 +129,7 @@
          <div class="content">
             <h3>New Year Party</h3>
             <p>Why not a good celebration to forget past bad memories and starting a new !!!<br></p><p style="color:maroon">-> 1 nights and 1 days package with bbq party </p>
-            <a href="book.php" class="btn">book now</a>
+            <a href="index1.php" class="btn">book now</a>
          </div>
       </div>
 
@@ -141,7 +140,7 @@
          <div class="content">
          <h3>Reunion Party</h3>
             <p>Too much busy with working life? Need a hangout with old buddies? Lets plan <br></p><p style="color:maroon"> 1 day package </p>
-            <a href="book.php" class="btn">book now</a>
+            <a href="index1.php" class="btn">book now</a>
          </div>
       </div>
 
@@ -153,7 +152,7 @@
             <h3>Corporate Events</h3>
             <p>Get a formal and unique event  <br></p>
             <p style="color:maroon">-> 1 day package </p>
-            <a href="book.php" class="btn">book now</a>
+            <a href="index1.php" class="btn">book now</a>
          </div>
       </div>
 

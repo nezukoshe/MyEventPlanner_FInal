@@ -29,7 +29,7 @@
       <a href="home.php">home</a>
       <a href="about.php">about</a>
       <a href="package.php">package</a>
-      <a href="book.php">book</a>
+      
       <a href="login.php">login</a>
       <a href="contactus.php">Contact Us</a>
    </nav>

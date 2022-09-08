@@ -27,7 +27,7 @@ $query=mysqli_query($con,"SELECT * FROM users WHERE email='$email' and password=
 $num=mysqli_fetch_array($query);
 if($num>0)
 {
-$extra="home.php";
+$extra="my-cart.php";
 $_SESSION['login']=$_POST['email'];
 $_SESSION['id']=$num['id'];
 $_SESSION['username']=$num['name'];
@@ -239,7 +239,7 @@ echo htmlentities($_SESSION['errmsg']="");
 		<div class="radio outer-xs">
 		  	<a href="forgot-password.php" class="forgot-password pull-right">Forgot your Password?</a>
 		</div>
-	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button" name="login"><a href="book.php">Login </button></a>
+	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button" name="login">Login </button>
 	</form>					
 </div>
 <!-- Sign-in -->

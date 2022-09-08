@@ -240,11 +240,11 @@ while($row=mysqli_fetch_array($query))
 			<?php include('includes/myaccount-sidebar.php');?>
 			</div><!-- /.row -->
 		</div><!-- /.checkout-box -->
-	<?php include('includes/brands-slider.php');?>
+	<?php //include('includes/brands-slider.php');?>
 
 </div>
 </div>
-<?php include('includes/footer.php');?>
+<?php //include('includes/footer.php');?>
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	
 	<script src="assets/js/bootstrap.min.js"></script>
